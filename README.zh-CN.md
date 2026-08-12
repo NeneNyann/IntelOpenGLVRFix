@@ -2,7 +2,7 @@
 
 [English](README.md) | 简体中文
 
-`IntelOpenGLVRFix` 用于修复在 Intel Arc 显卡上通过 SteamVR 运行使用 OpenGL 的 VR 应用时，应用正常运行但头显中没有画面的问题。
+`IntelOpenGLVRFix` 用于修复在 Windows 系统上 Intel Arc 显卡上通过 SteamVR 运行使用 OpenGL 的 VR 应用时，应用正常运行但头显中没有画面的问题。
 
 项目包含两个组件：
 

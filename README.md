@@ -2,7 +2,7 @@
 
 English | [简体中文](README.zh-CN.md)
 
-`IntelOpenGLVRFix` fixes an issue on Intel Arc graphics cards where VR applications using OpenGL through SteamVR run normally but display no image in the headset.
+`IntelOpenGLVRFix` fixes an issue on Windows systems with Intel Arc graphics cards where VR applications using OpenGL through SteamVR run normally but display no image in the headset.
 
 The project contains two components:
 
