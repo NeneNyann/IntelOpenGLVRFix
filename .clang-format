@@ -1,0 +1,17 @@
+BasedOnStyle: Microsoft
+BreakBeforeBraces: Attach
+ColumnLimit: 140
+IndentWidth: 4
+ContinuationIndentWidth: 4
+AlignAfterOpenBracket: Align
+BreakAfterReturnType: None
+PenaltyReturnTypeOnItsOwnLine: 1000000
+BreakTemplateDeclarations: Yes
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: None
+BinPackArguments: true
+BinPackParameters: BinPack
+PointerAlignment: Right
+DerivePointerAlignment: false
+SortIncludes: Never
