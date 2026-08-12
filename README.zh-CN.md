@@ -60,6 +60,8 @@ SteamVR 通过 `WGL_NV_DX_interop` 在 OpenGL 与 Direct3D 11 之间共享渲染
 - [OpenVR Advanced Settings](https://github.com/OpenVR-Advanced-Settings/OpenVR-AdvancedSettings/) 5.8.11：使用 `opengl32.dll` 和 `openvr_api.dll` preloader 后，overlay 内容能在头显中正常显示。
 - [Vivecraft](https://github.com/Vivecraft/VivecraftMod/) 1.21.1-1.3.15，Minecraft 1.21.1，[NeoForge](https://github.com/neoforged/neoforge/) 21.1.248：将 `opengl32.dll` 部署到实际使用的 Java 目录后，游戏画面能够通过 SteamVR 正常显示。
 
+![MC](assets/mc.png)
+
 ## 手动构建
 
 ```
