@@ -21,6 +21,12 @@ Place `opengl32.dll` in the directory containing the game's main executable.
 
 Place `opengl32.dll` in the directory containing the `java.exe` / `javaw.exe` actually used by Minecraft.
 
+Open `config/vivecraft-client-config.json` in the Minecraft instance directory and change `blockIntelWindows` from `"true"` to `"false"`:
+
+```json
+"blockIntelWindows": "false"
+```
+
 ### [OpenVR Advanced Settings](https://github.com/OpenVR-Advanced-Settings/OpenVR-AdvancedSettings/)
 
 When OpenVR Advanced Settings loads SteamVR, `vrclient_x64.dll` loads the native `opengl32.dll` from the system directory. In this case, placing only the modified `opengl32.dll` will not work, so the preloader is also required:
