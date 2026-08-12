@@ -62,7 +62,6 @@ Hardware and runtime environment:
 
 Verified applications:
 
-- [Desktop+](https://github.com/elvissteinjr/DesktopPlus/) 3.5: Desktop content displays correctly in the headset after using `opengl32.dll`.
 - [OpenVR Advanced Settings](https://github.com/OpenVR-Advanced-Settings/OpenVR-AdvancedSettings/) 5.8.11: Overlay content displays correctly in the headset after using `opengl32.dll` and the `openvr_api.dll` preloader.
 - [Vivecraft](https://github.com/Vivecraft/VivecraftMod/) 1.21.1-1.3.15, Minecraft 1.21.1, [NeoForge](https://github.com/neoforged/neoforge/) 21.1.248: The game renders correctly through SteamVR after deploying `opengl32.dll` to the Java directory actually in use.
 
