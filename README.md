@@ -52,20 +52,49 @@ As of the time this project was written, the `WGL_NV_DX_interop` implementation 
 
 ## Tested Environment
 
-Hardware and runtime environment:
-
-- System: Windows 11 25H2 26200.8875
-- GPU: Intel Arc B580, driver 32.0.101.8864
-- Headset: Quest 2
-- Streaming: [Virtual Desktop](https://www.vrdesktop.net/) 1.34.18
-- VR Runtime: [SteamVR](https://store.steampowered.com/app/250820/SteamVR/) 2.16.7
-
 Verified applications:
 
 - [OpenVR Advanced Settings](https://github.com/OpenVR-Advanced-Settings/OpenVR-AdvancedSettings/) 5.8.11: Overlay content displays correctly in the headset after using `opengl32.dll` and the `openvr_api.dll` preloader.
 - [Vivecraft](https://github.com/Vivecraft/VivecraftMod/) 1.21.1-1.3.15, Minecraft 1.21.1, [NeoForge](https://github.com/neoforged/neoforge/) 21.1.248: The game renders correctly through SteamVR after deploying `opengl32.dll` to the Java directory actually in use.
 
-![MC](assets/mc.png)
+### Informal Vivecraft Performance Test
+
+The following results are gameplay captures rather than standardized performance benchmarks and are provided for reference only.
+
+Common test configuration:
+
+- System: Windows 11 25H2 26200.8875
+- CPU: Intel Core i7-14700K
+- GPU: Intel Arc B580, driver 32.0.101.8864
+- Headset: Quest 2
+- Streaming: [Virtual Desktop](https://www.vrdesktop.net/) 1.34.18
+- VR Runtime: [SteamVR](https://store.steampowered.com/app/250820/SteamVR/) 2.16.7
+- Game: [Vivecraft](https://github.com/Vivecraft/VivecraftMod/) 1.21.1-1.3.15, Minecraft 1.21.1, [NeoForge](https://github.com/neoforged/neoforge/) 21.1.248
+- Java: Adoptium OpenJDK
+- Memory allocated to Minecraft: 16 GB
+- Test scenario: newly created Minecraft world
+
+#### No Shaders
+
+- Virtual Desktop graphics quality: Medium
+- Synchronous Spacewarp (SSW): disabled
+- SteamVR render scale: 100%
+- Vivecraft render scale: 100%
+- Render distance: 12 chunks
+
+![Vivecraft performance test](assets/mc_vanilla.jpg)
+
+#### Complementary Unbound Shaders
+
+- Virtual Desktop graphics quality: Medium
+- Synchronous Spacewarp (SSW): enabled; the in-game FPS counter shows half of the actual frame rate displayed in the headset
+- SteamVR render scale: 100%
+- Vivecraft render scale: 130%
+- Render distance: 12 chunks
+- Optimization mods: Sodium + Iris
+- Shader pack: Complementary Unbound r5.8.1, Medium preset
+
+![Vivecraft Complementary Unbound shader test](assets/mc_iris.png)
 
 ## Manual Build
 

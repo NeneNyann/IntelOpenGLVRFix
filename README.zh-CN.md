@@ -52,20 +52,49 @@ SteamVR 通过 `WGL_NV_DX_interop` 在 OpenGL 与 Direct3D 11 之间共享渲染
 
 ## 已测试环境
 
-硬件与运行环境：
-
-- 系统：Windows 11 25H2 26200.8875
-- 显卡：Intel Arc B580 驱动：32.0.101.8864
-- 头显：Quest 2
-- 串流：[Virtual Desktop](https://www.vrdesktop.net/) 1.34.18
-- VR Runtime：[SteamVR](https://store.steampowered.com/app/250820/SteamVR/) 2.16.7
-
 已验证应用：
 
 - [OpenVR Advanced Settings](https://github.com/OpenVR-Advanced-Settings/OpenVR-AdvancedSettings/) 5.8.11：使用 `opengl32.dll` 和 `openvr_api.dll` preloader 后，overlay 内容能在头显中正常显示。
 - [Vivecraft](https://github.com/Vivecraft/VivecraftMod/) 1.21.1-1.3.15，Minecraft 1.21.1，[NeoForge](https://github.com/neoforged/neoforge/) 21.1.248：将 `opengl32.dll` 部署到实际使用的 Java 目录后，游戏画面能够通过 SteamVR 正常显示。
 
-![MC](assets/mc.png)
+### Vivecraft 非专业性能测试
+
+以下结果来自实际游玩截图，并非标准化性能基准测试，仅供参考。
+
+共同测试配置：
+
+- 系统：Windows 11 25H2 26200.8875
+- 处理器：Intel Core i7-14700K
+- 显卡：Intel Arc B580，驱动 32.0.101.8864
+- 头显：Quest 2
+- 串流：[Virtual Desktop](https://www.vrdesktop.net/) 1.34.18
+- VR Runtime：[SteamVR](https://store.steampowered.com/app/250820/SteamVR/) 2.16.7
+- 游戏：[Vivecraft](https://github.com/Vivecraft/VivecraftMod/) 1.21.1-1.3.15，Minecraft 1.21.1，[NeoForge](https://github.com/neoforged/neoforge/) 21.1.248
+- Java：Adoptium OpenJDK
+- Minecraft 分配内存：16 GB
+- 测试场景：新创建的 Minecraft 世界
+
+#### 无光影
+
+- Virtual Desktop 图形质量：Medium
+- Synchronous Spacewarp (SSW)：关闭
+- SteamVR 渲染比例：100%
+- Vivecraft 渲染比例：100%
+- 视距：12 区块
+
+![Vivecraft 性能测试](assets/mc_vanilla.jpg)
+
+#### Complementary Unbound 光影
+
+- Virtual Desktop 图形质量：Medium
+- Synchronous Spacewarp (SSW)：开启，游戏内显示的 FPS 为头显实际画面帧率的一半
+- SteamVR 渲染比例：100%
+- Vivecraft 渲染比例：130%
+- 视距：12 区块
+- 优化模组：Sodium + Iris
+- 光影：Complementary Unbound r5.8.1，Medium 预设
+
+![Vivecraft Complementary Unbound 光影测试](assets/mc_iris.png)
 
 ## 手动构建
 
